@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">    
     <title>Сайт Web-студії "web-DECO" </title>
+<script src="js/clock1.js"></script>    
 <script type="text/javascript">
 function send()
 {
@@ -35,6 +36,12 @@ function send()
      front-size: 2em;
  }
     </style>
+<script>
+window.onload=function()
+{
+    setInterval(clockPainting,1000);
+}    
+</script>    
 </head>
 <body background="images/bg.jpd">     
 <table border="1" align="center" cellpadding="10">
@@ -52,6 +59,8 @@ function send()
     </tr>
     <tr>
     <td width="30%" valign="top" >
+    <center><canvas id="canvas" height="120" width="120"></canvas></center>
+    <hr>    
     <front size="5" color="navy"><h2>Новини</h2></front>    
     <front size="5">        
     <ul>
@@ -76,7 +85,7 @@ function send()
     <TD><input type="text" size="10" maxlength="20" name="name1"></TD> 
     </TR>
     <TR>
-    <TD><front color="green"> <E-mail></front>: </TD>
+    <TD><front color="green"> E-mail</front>: </TD>
     <TD><input type="email" size="10" maxlength="20" name="email"></TD>       
     </TR>
     <TR>
